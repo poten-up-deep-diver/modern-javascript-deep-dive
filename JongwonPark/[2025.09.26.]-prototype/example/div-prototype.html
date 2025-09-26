@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script>
+      const div = document.createElement("div");
+
+      // HTMLElement
+      let proto = div;
+
+      // Div HTML Element Prototype Chain
+      while (proto) {
+        console.log(proto.constructor.name);
+        proto = Object.getPrototypeOf(proto);
+      }
+
+      // Div HTML Element Prototype Object Properties and Methods
+      console.log(Object.getPrototypeOf(div));
+    </script>
+
+    <title>Div Prototype</title>
+  </head>
+  <body></body>
+</html>
