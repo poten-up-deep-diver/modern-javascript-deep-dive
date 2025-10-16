@@ -1,6 +1,6 @@
 # 데이터 프로퍼티와 접근자 프로퍼티
 
-Data Property VS Accessor Property
+Data Property VS Accessor Property.
 
 ## 새벽 1시.. 발 닦고 자고 싶다
 
@@ -67,3 +67,10 @@ let rectangle = {
 console.log(rectangle.area);
 rectangle.area = 100;
 ```
+
+이를 판단하는 것은 우리가 프로퍼티에 어떻게 접근하는지, 그 맥락을 보고 getter를 호출할지, setter를 호출할지 자동으로 판단한다.
+
+정말 단순하게
+
+- 값을 읽을거야? -> getter
+- 값을 작성할거야? -> setter
