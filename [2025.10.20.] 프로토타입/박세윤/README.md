@@ -1,4 +1,4 @@
-# [JS] prototype과 **proto**의 차이
+# [JS] prototype과 \_\_proto\_\_의 차이
 
 ## 들어가기 전
 
@@ -28,13 +28,13 @@
 
 참고로, 모든 객체는 `[[prototype]]` 이라는 내부 슬롯을 가진다. 그리고, 이 내부슬롯은 `__proto__`를 통해 접근할 수 있다.
 
-## prototype과 ****proto****의 차이
+## prototype과 \_\_proto\_\_의 차이
 
-내부 슬롯은 알겠지만, prototype과 **proto**는 또 무엇일까?
+내부 슬롯은 알겠지만, prototype과 \_\_proto\_\_는 또 무엇일까?
 
 둘 다 본인 객체의 프로토타입(부모 객체)를 가리키는 것 처럼 보이는데, 차이점은 무엇일까? 다음의 표를 통해 차이점을 알아보자.
 
-| 구분   | prototype                                            | **proto**                                                          |
+| 구분   | prototype                                            | \_\_proto\_\_                                                      |
 | ------ | ---------------------------------------------------- | ------------------------------------------------------------------ |
 | 소유자 | 생성자 함수                                          | 모든 객체                                                          |
 | 역할   | 인스턴스들의 부모 역할을 할 프로토타입 객체를 가리킴 | prototype 프로퍼티가 가리키는 프로토타입 객체에 접근하기 위해 사용 |
@@ -73,7 +73,7 @@ Person.__proto__.printName = function () {
   console.log(`My name is ${this.name}`);
 };
 
-const user = new Person('Seyun');
+const user = new Person("Seyun");
 user.printName(); // TypeError: user.printName is Not Function
 ```
 
