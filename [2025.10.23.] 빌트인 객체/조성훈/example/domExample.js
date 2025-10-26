@@ -12,12 +12,12 @@ class DOMElement {
   // ----------------------------------------------------
 
   // 'className' 속성: HTML 'class' 속성과의 동기화를 위한 접근자
-  get className() {
+  get class() {
     console.log("-> [Getter 호출]: #attributes.class 값을 읽어옵니다.");
     return this.#attributes.class;
   }
 
-  set className(newValue) {
+  set class(newValue) {
     console.log(
       `-> [Setter 호출]: #attributes.class를 '${newValue}'로 업데이트합니다.`
     );
@@ -80,12 +80,12 @@ class DOMElement {
 const myDivElement = new DOMElement("myDiv", "box", "안녕하세요");
 
 console.log("\n--- 1. 속성 (className) 값 읽기 (Getter 실행) ---");
-const currentClass = myDivElement.className;
+const currentClass = myDivElement.class;
 console.log(`현재 클래스: ${currentClass}`); // Getter 호출
 
 console.log("\n--- 2. 속성 (className) 값 변경 (Setter 실행) ---");
-myDivElement.className = "active-box"; // Setter 호출
-console.log(`변경된 클래스: ${myDivElement.className}`); // Getter 호출
+myDivElement.class = "active-box"; // Setter 호출
+console.log(`변경된 클래스: ${myDivElement.class}`); // Getter 호출
 
 console.log("\n--- 3. 메서드 (remove) 실행 ---");
 myDivElement.remove(); // 메서드 호출
